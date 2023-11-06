@@ -5,7 +5,7 @@ app = Flask(__name__)
 db_location = 'var/test.db'
 
 def get_db():
-    db = sqlite3.connect(g, 'db', None)
+    db = sqlite3.attr(g, 'db', None)
     if db is None:
         db = sqlite3.connect(db_location)
         g.db = db
