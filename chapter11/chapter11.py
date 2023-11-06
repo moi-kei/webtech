@@ -41,7 +41,7 @@ def root():
         if check_auth(request.form['email'], request.form['password']):
             session['logged_in'] = True
             return redirect(url_for('.secret'))
-        return render_template('login.html')
+    return render_template('login.html')
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
