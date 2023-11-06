@@ -27,7 +27,7 @@ def init_db():
 @app.route('/')
 def root():
     db = get_db()
-    db.cursor.execute('insert into albums values ("American beauty", Grateful dead", "CD")')
+    db.cursor().execute('insert into albums values ("American beauty", Grateful dead", "CD")')
     db.commit()
 
     page = []
